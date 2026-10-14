@@ -1,0 +1,22 @@
+File: mote_7.csv
+Number of rows: 55354
+
+=== Frequency ===
+Average time between two results: 52.99 s
+Min gap: 0.00 s   Max gap: 88073.94 s
+Frequency: 0.0189 Hz  (1.13 results per minute)
+
+=== Temperature ===
+Average difference (n+1 - n): 0.0019
+Average absolute difference : 0.0247
+Biggest jump                : 6.1936
+
+=== Humidity ===
+Average difference (n+1 - n): -0.0008
+Average absolute difference : 0.0492
+Biggest jump                : 3.5309
+
+=== Light ===
+Average difference (n+1 - n): 0.0004
+Average absolute difference : 1.2951
+Biggest jump                : 511.5200

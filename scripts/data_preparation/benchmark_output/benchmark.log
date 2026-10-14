@@ -1,0 +1,53 @@
+2026-10-10 21:06:59,558 | INFO | Input: /home/ahmed-cherif/data_compression_bitteiler_technical_task/data/data_by_sensor_node/csv/mote_7.csv
+2026-10-10 21:06:59,558 | INFO | Rows tested: 43000 (first 43000 data rows; header excluded)
+2026-10-10 21:06:59,558 | INFO | Zstandard level: 9
+2026-10-10 21:06:59,559 | INFO | date range: 2004-02-28 to 2004-03-21
+2026-10-10 21:06:59,559 | INFO | time range: 01:05:16.649448 to 14:34:12.720134
+2026-10-10 21:06:59,559 | INFO | ----- temperature -----
+2026-10-10 21:06:59,605 | INFO | scale=10000 min=17.7344 max=26.427 mean=21.643 unique=888 runs=28335 adjacent repeats=34.11% max_run=75
+2026-10-10 21:06:59,611 | INFO | temperature | raw_zstd           |   43905 B | ratio 7.835x | saved 87.24% | enc 0.0056s | dec 0.0004s | exact=True
+2026-10-10 21:06:59,616 | INFO | temperature | delta_zstd         |   30852 B | ratio 11.150x | saved 91.03% | enc 0.0039s | dec 0.0003s | exact=True
+2026-10-10 21:06:59,628 | INFO | temperature | xor_float64_zstd   |   67530 B | ratio 5.094x | saved 80.37% | enc 0.0041s | dec 0.0079s | exact=True
+2026-10-10 21:06:59,628 | INFO | ----- humidity -----
+2026-10-10 21:06:59,675 | INFO | scale=10000 min=23.5626 max=50.0966 mean=39.0158 unique=726 runs=29213 adjacent repeats=32.06% max_run=35
+2026-10-10 21:06:59,681 | INFO | humidity | raw_zstd           |   43446 B | ratio 7.918x | saved 87.37% | enc 0.0044s | dec 0.0003s | exact=True
+2026-10-10 21:06:59,686 | INFO | humidity | delta_zstd         |   49805 B | ratio 6.907x | saved 85.52% | enc 0.0046s | dec 0.0003s | exact=True
+2026-10-10 21:06:59,698 | INFO | humidity | xor_float64_zstd   |   69748 B | ratio 4.932x | saved 79.72% | enc 0.0039s | dec 0.0077s | exact=True
+2026-10-10 21:06:59,698 | INFO | ----- light -----
+2026-10-10 21:06:59,735 | ERROR | Benchmark failed
+Traceback (most recent call last):
+  File "/home/ahmed-cherif/data_compression_bitteiler_technical_task/scripts/data_preparation/plotting_data.py", line 205, in main
+    ints = scaled_ints(df[feature], scale, feature)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ahmed-cherif/data_compression_bitteiler_technical_task/scripts/data_preparation/plotting_data.py", line 30, in scaled_ints
+    raise ValueError(
+ValueError: light: 0.0201102 at row 38034 is not exactly representable with scale 100; inspect source precision before changing scale.
+2026-10-10 21:07:57,457 | INFO | Input: /home/ahmed-cherif/data_compression_bitteiler_technical_task/data/data_by_sensor_node/csv/mote_7.csv
+2026-10-10 21:07:57,458 | INFO | Rows tested: 43000 (first 43000 data rows; header excluded)
+2026-10-10 21:07:57,458 | INFO | Zstandard level: 9
+2026-10-10 21:07:57,458 | INFO | date range: 2004-02-28 to 2004-03-21
+2026-10-10 21:07:57,458 | INFO | time range: 01:05:16.649448 to 14:34:12.720134
+2026-10-10 21:07:57,458 | INFO | ----- temperature -----
+2026-10-10 21:07:57,523 | INFO | Exact decimal integer scale selected: 10000 (preferred minimum: 10000)
+2026-10-10 21:07:57,525 | INFO | scale=10000 min=17.7344 max=26.427 mean=21.643 unique=888 runs=28335 adjacent repeats=34.11% max_run=75
+2026-10-10 21:07:57,532 | INFO | temperature | raw_zstd           |   43905 B | ratio 7.835x | saved 87.24% | enc 0.0063s | dec 0.0004s | exact=True
+2026-10-10 21:07:57,537 | INFO | temperature | delta_zstd         |   30852 B | ratio 11.150x | saved 91.03% | enc 0.0040s | dec 0.0003s | exact=True
+2026-10-10 21:07:57,551 | INFO | temperature | xor_float64_zstd   |   67530 B | ratio 5.094x | saved 80.37% | enc 0.0049s | dec 0.0083s | exact=True
+2026-10-10 21:07:57,551 | INFO | ----- humidity -----
+2026-10-10 21:07:57,616 | INFO | Exact decimal integer scale selected: 10000 (preferred minimum: 10000)
+2026-10-10 21:07:57,618 | INFO | scale=10000 min=23.5626 max=50.0966 mean=39.0158 unique=726 runs=29213 adjacent repeats=32.06% max_run=35
+2026-10-10 21:07:57,623 | INFO | humidity | raw_zstd           |   43446 B | ratio 7.918x | saved 87.37% | enc 0.0045s | dec 0.0003s | exact=True
+2026-10-10 21:07:57,628 | INFO | humidity | delta_zstd         |   49805 B | ratio 6.907x | saved 85.52% | enc 0.0046s | dec 0.0004s | exact=True
+2026-10-10 21:07:57,641 | INFO | humidity | xor_float64_zstd   |   69748 B | ratio 4.932x | saved 79.72% | enc 0.0039s | dec 0.0079s | exact=True
+2026-10-10 21:07:57,641 | INFO | ----- light -----
+2026-10-10 21:07:57,704 | INFO | Exact decimal integer scale selected: 10000000 (preferred minimum: 100)
+2026-10-10 21:07:57,706 | INFO | scale=10000000 min=0.0201102 max=625.6 mean=129.392 unique=97 runs=4815 adjacent repeats=88.80% max_run=625
+2026-10-10 21:07:57,708 | INFO | light | raw_zstd           |    9370 B | ratio 36.713x | saved 97.28% | enc 0.0015s | dec 0.0003s | exact=True
+2026-10-10 21:07:57,721 | INFO | light | rle_zstd           |    7780 B | ratio 44.216x | saved 97.74% | enc 0.0103s | dec 0.0026s | exact=True
+2026-10-10 21:07:57,731 | INFO | light | xor_float64_zstd   |   11232 B | ratio 30.627x | saved 96.73% | enc 0.0018s | dec 0.0080s | exact=True
+2026-10-10 21:07:57,733 | INFO | All lossless checks passed.
+2026-10-10 21:07:57,733 | INFO | Created: /home/ahmed-cherif/data_compression_bitteiler_technical_task/scripts/data_preparation/benchmark_output/results.csv
+2026-10-10 21:07:57,733 | INFO | Created: /home/ahmed-cherif/data_compression_bitteiler_technical_task/scripts/data_preparation/benchmark_output/report.json
+2026-10-10 21:07:57,734 | INFO | Created: /home/ahmed-cherif/data_compression_bitteiler_technical_task/scripts/data_preparation/benchmark_output/benchmark.log
+2026-10-10 21:07:57,734 | INFO | Compressed artifacts: /home/ahmed-cherif/data_compression_bitteiler_technical_task/scripts/data_preparation/benchmark_output/compressed
+2026-10-10 21:07:57,734 | INFO | Send me results.csv, report.json, and benchmark.log for analysis.
