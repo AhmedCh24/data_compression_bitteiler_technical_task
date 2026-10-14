@@ -1,0 +1,2 @@
+# data_compression_bitteiler_technical_task
+data compression task
